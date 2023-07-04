@@ -1,0 +1,31 @@
+{
+  "date": "2023-07-03",
+  "description": "Delivery of goods to the customer",
+  "anomalies": [
+    {
+      "type": "temperature",
+      "value": ["30", "40"],
+      "time": ["14:00", "15:00"]
+    },
+    {
+      "type": "humidity",
+      "value": ["30", "40"],
+      "time": ["14:00", "15:00"]
+    },
+    {
+      "type": "pressure",
+      "value": ["1000", "1100"],
+      "time": ["14:00", "15:00"]
+    },
+    {
+      "type": "co2",
+      "value": ["600", "600"],
+      "time": ["14:00", "15:00"]
+    },
+    {
+      "type": "darkness",
+      "value": ["1", "1"],
+      "time": ["14:00", "15:00"]
+    }
+  ]
+}

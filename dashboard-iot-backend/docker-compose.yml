@@ -1,0 +1,30 @@
+version: "3.8"
+
+services:
+
+  springboot:
+    platform: linux/x86_64
+    image: openjdk:17-jdk-alpine
+    container_name: springboot
+    ports:
+      - 8080:8080
+    depends_on:
+      - my-db
+    networks:
+      - my-net
+    volumes:
+      - ./build/libs/dashboard-iot-backend-0.0.1-SNAPSHOT.jar:/app/app.jar
+    working_dir: /app
+    entrypoint: java -jar /app/app.jar
+
+  my-db:
+    image: mongo:5.0
+    container_name: mongo
+    #ports:
+    #- 27013:27017
+    networks:
+      - my-net
+
+networks:
+  my-net:
+    driver: bridge
