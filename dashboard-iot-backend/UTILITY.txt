@@ -1,26 +1,35 @@
 {
-  "date": "2023-07-03",
+  "dateStart": "2023-07-03",
+  "dateEnd": "2023-07-03",
   "description": "Delivery of goods to the customer",
   "anomalies": [
     {
       "type": "temperature",
       "value": ["30", "40"],
-      "time": ["14:00", "15:00"]
+      "time": ["14:00", "15:00"],
+      "minValue" : 10,
+      "maxValue" : 20
     },
     {
       "type": "humidity",
       "value": ["30", "40"],
-      "time": ["14:00", "15:00"]
+      "time": ["14:00", "15:00"],
+      "minValue" : 20,
+      "maxValue" : 25
     },
     {
       "type": "pressure",
       "value": ["1000", "1100"],
-      "time": ["14:00", "15:00"]
+      "time": ["14:00", "15:00"],
+      "minValue" : 800,
+      "maxValue" : 900
     },
     {
       "type": "co2",
       "value": ["600", "600"],
-      "time": ["14:00", "15:00"]
+      "time": ["14:00", "15:00"],
+      "minValue" : 200,
+      "maxValue" : 400
     },
     {
       "type": "darkness",

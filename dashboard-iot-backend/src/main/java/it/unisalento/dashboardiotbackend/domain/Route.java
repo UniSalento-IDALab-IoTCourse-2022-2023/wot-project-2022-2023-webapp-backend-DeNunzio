@@ -10,30 +10,32 @@ import java.util.ArrayList;
 public class Route {
     @Id
     String id;
-    private String date;
+    private String dateStart;
+    private String dateEnd;
     private String description;
     private ArrayList<Anomaly> anomalies;
 
-    public String getDate() {
-        return date;
+    public String getDateStart() {
+        return dateStart;
     }
-
-    public void setDate(String date) {
-        this.date = date;
+    public void setDateStart(String dateStart) {
+        this.dateStart = dateStart;
     }
-
+    public String getDateEnd() {
+        return dateEnd;
+    }
+    public void setDateEnd(String dateEnd) {
+        this.dateEnd = dateEnd;
+    }
     public String getDescription() {
         return description;
     }
-
     public void setDescription(String description) {
         this.description = description;
     }
-
     public ArrayList<Anomaly> getAnomalies() {
         return anomalies;
     }
-
     public void setAnomalies(ArrayList<Anomaly> anomalies) {
         this.anomalies = anomalies;
     }

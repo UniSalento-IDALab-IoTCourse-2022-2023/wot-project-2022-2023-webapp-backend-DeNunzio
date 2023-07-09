@@ -25,10 +25,10 @@ public class MainRestController {
         for (Route route : routeRepository.findAll()) {
             RouteDTO tempRouteDTO = new RouteDTO();
             tempRouteDTO.setAnomalies(route.getAnomalies());
-            tempRouteDTO.setDate(route.getDate());
+            tempRouteDTO.setDateEnd(route.getDateEnd());
+            tempRouteDTO.setDateStart(route.getDateStart());
             tempRouteDTO.setDescription(route.getDescription());
             routeDTOS.add(tempRouteDTO);
-
         }
             return routeDTOS;
     }
@@ -40,7 +40,8 @@ public class MainRestController {
 
         Route route = new Route();
         route.setAnomalies(routeDTO.getAnomalies());
-        route.setDate(routeDTO.getDate());
+        route.setDateStart(routeDTO.getDateStart());
+        route.setDateEnd(routeDTO.getDateEnd());
         route.setDescription(routeDTO.getDescription());
         routeRepository.save(route);
 
