@@ -1,40 +1,53 @@
+
+Crei un percorso con una POST a /api/addRoute
 {
-  "dateStart": "2023-07-03",
-  "dateEnd": "2023-07-03",
   "description": "Delivery of goods to the customer",
   "anomalies": [
     {
       "type": "temperature",
-      "value": ["30", "40"],
-      "time": ["14:00", "15:00"],
       "minValue" : 10,
       "maxValue" : 20
     },
     {
       "type": "humidity",
-      "value": ["30", "40"],
-      "time": ["14:00", "15:00"],
       "minValue" : 20,
       "maxValue" : 25
     },
     {
       "type": "pressure",
-      "value": ["1000", "1100"],
-      "time": ["14:00", "15:00"],
       "minValue" : 800,
       "maxValue" : 900
     },
     {
       "type": "co2",
-      "value": ["600", "600"],
-      "time": ["14:00", "15:00"],
       "minValue" : 200,
       "maxValue" : 400
     },
     {
-      "type": "darkness",
-      "value": ["1", "1"],
-      "time": ["14:00", "15:00"]
+      "type": "darkness"
     }
   ]
 }
+
+
+Man mano che ci sono anomalie le invii tramite una post a /api/addAnomaly
+NOTA: dateRoute e startTime identificano una route
+
+{
+  "routeId" : "64ad2cf5f56b987cd53f139a",
+  "type": "temperature",
+  "value": "110",
+  "time": "10:30"
+}
+
+
+Puoi terminate una route con una POST a /api/endRoute
+
+{
+  "id" : "INSERTID",
+  "endRoute" : "14:00"
+}
+
+Puoi infine prendere tutti i dati tramite una POST a /api/getRoutes
+
+

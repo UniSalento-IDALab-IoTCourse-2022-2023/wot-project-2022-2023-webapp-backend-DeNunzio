@@ -10,23 +10,44 @@ import java.util.ArrayList;
 public class Route {
     @Id
     String id;
-    private String dateStart;
-    private String dateEnd;
+    private String date;
+    private String startClock;
+    private String endClock;
     private String description;
     private ArrayList<Anomaly> anomalies;
 
-    public String getDateStart() {
-        return dateStart;
+    public String getId() {
+        return id;
     }
-    public void setDateStart(String dateStart) {
-        this.dateStart = dateStart;
+
+    public void setId(String id) {
+        this.id = id;
     }
-    public String getDateEnd() {
-        return dateEnd;
+
+    public String getDate() {
+        return date;
     }
-    public void setDateEnd(String dateEnd) {
-        this.dateEnd = dateEnd;
+
+    public void setDate(String date) {
+        this.date = date;
     }
+
+    public String getStartClock() {
+        return startClock;
+    }
+
+    public void setStartClock(String startClock) {
+        this.startClock = startClock;
+    }
+
+    public String getEndClock() {
+        return endClock;
+    }
+
+    public void setEndClock(String endClock) {
+        this.endClock = endClock;
+    }
+
     public String getDescription() {
         return description;
     }
@@ -38,5 +59,8 @@ public class Route {
     }
     public void setAnomalies(ArrayList<Anomaly> anomalies) {
         this.anomalies = anomalies;
+    }
+    public void addAnomaly(Anomaly newAnomaly){
+        this.anomalies.add(newAnomaly);
     }
 }
