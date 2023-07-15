@@ -35,7 +35,9 @@ public class MainRestController {
             tempRouteDTO.setStartClock(route.getStartClock());
             tempRouteDTO.setEndClock(route.getEndClock());
             tempRouteDTO.setDescription(route.getDescription());
+            tempRouteDTO.setId(route.getId());
             routeDTOS.add(tempRouteDTO);
+
         }
             return routeDTOS;
     }
@@ -53,7 +55,7 @@ public class MainRestController {
         route.setDescription(routeDTO.getDescription());
         routeRepository.save(route);
 
-        responseDTO.setResponse(routeRepository.findByDateAndStartClock(route.getDate(), route.getStartClock()).get().getId());
+        responseDTO.setResponse(routeRepository.findByDateAndStartClock(route.getDate(), route.getStartClock()).get().getId().toString());
         return responseDTO;
     }
 

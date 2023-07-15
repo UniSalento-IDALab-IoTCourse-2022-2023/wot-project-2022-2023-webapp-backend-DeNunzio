@@ -24,7 +24,10 @@ Crei un percorso con una POST a /api/addRoute
       "maxValue" : 400
     },
     {
-      "type": "darkness"
+      "type": "light"
+    },
+    {
+      "type": "horizontal"
     }
   ]
 }
@@ -44,10 +47,11 @@ NOTA: dateRoute e startTime identificano una route
 Puoi terminate una route con una POST a /api/endRoute
 
 {
-  "id" : "INSERTID",
-  "endRoute" : "14:00"
+  "id" : "INSERTID"
 }
 
 Puoi infine prendere tutti i dati tramite una POST a /api/getRoutes
+
+
 
 
