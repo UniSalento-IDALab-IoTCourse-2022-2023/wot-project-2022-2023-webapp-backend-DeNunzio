@@ -49,6 +49,7 @@ Tramite una POST con un json come segue a questo endpoint si crea un nuovo perco
 Questa operazione comunicherà nel back-end l’informazione che è iniziata una nuova corsa, e salverà automaticamente l’orario di inizio.
 Il valore ritornato da questa richiesta è l’ID della route, che sarà necessario nei prossimi endpoint.
 ### /api/addAnomaly
+
 Ogni volta che lo script con il compito di analizzare l’ambiente (visto nel paragrafo precedente) trova un’anomalia, invia tramite WebSocket l’informazione alla mobile application. Questa applicazione si occuperà di notificare questo backend dell’anomalia tramite una POST a questo endpoint con un json del tipo:
 ```json
 {
@@ -61,6 +62,7 @@ Ogni volta che lo script con il compito di analizzare l’ambiente (visto nel pa
 Il json contiene informazioni sulla corsa a cui fa riferimento, sul tipo di anomalia, sul valore misurato e sull’orario a cui è successo.
 Questa operazione deve essere eseguita ogni volta che si trova un’anomalia, così che la dashboard possa aggiornarsi in tempo reale.
 ###/api/endRoute
+
 Quando un percorso finisce, tramite questo endpoint si invia l’informazione al back-end, il quale salva automaticamente l’orario di fine corsa.
 ```json
 {
@@ -69,6 +71,7 @@ Quando un percorso finisce, tramite questo endpoint si invia l’informazione al
 ```
 
 ###/api/getRoutes
+
 Questo endpoint ritorna tutte le route salvate nel database tramite un json come nella pagina seguente, completo di orario di inizio, orario di fine, e dettagli sulle anomalie riscontrate.
 ```json
 {
