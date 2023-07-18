@@ -70,7 +70,7 @@ Quando un percorso finisce, tramite questo endpoint si invia l’informazione al
 }
 ```
 
-###/api/getRoutes
+### /api/getRoutes
 
 Questo endpoint ritorna tutte le route salvate nel database tramite un json come nella pagina seguente, completo di orario di inizio, orario di fine, e dettagli sulle anomalie riscontrate.
 ```json
