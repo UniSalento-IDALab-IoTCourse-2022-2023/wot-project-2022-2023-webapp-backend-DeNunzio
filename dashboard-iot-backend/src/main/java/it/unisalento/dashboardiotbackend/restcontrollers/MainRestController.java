@@ -28,7 +28,7 @@ public class MainRestController {
     @RequestMapping(value="/getRoutes", method= RequestMethod.GET)
     public List<RouteDTO> getAllRoutes() {
         List<RouteDTO> routeDTOS = new ArrayList<>();
-        for (Route route : routeRepository.findAll()) {
+        for (Route route : routeRepository.findAllByOrderByDateDesc()) {
             RouteDTO tempRouteDTO = new RouteDTO();
             tempRouteDTO.setAnomalies(route.getAnomalies());
             tempRouteDTO.setDate(route.getDate());
@@ -116,6 +116,10 @@ public class MainRestController {
         return responseDTO;
     }
 
-
+    @RequestMapping(value="/deleteAllRoutes", method= RequestMethod.GET)
+    public int deleteAllRoutes() {
+        routeRepository.deleteAll();
+        return 0;   
+    }
 
 }

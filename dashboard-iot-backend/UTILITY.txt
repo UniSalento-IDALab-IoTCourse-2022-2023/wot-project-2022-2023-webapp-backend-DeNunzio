@@ -1,33 +1,37 @@
 
 Crei un percorso con una POST a /api/addRoute
 {
-  "description": "Delivery of goods to the customer",
+  "description": "Trasporto di cibo pronto, richieste temperature elevate e bassa umidità",
   "anomalies": [
     {
       "type": "temperature",
-      "minValue" : 10,
-      "maxValue" : 20
+      "minValue" : 25,
+      "maxValue" : 35
     },
     {
       "type": "humidity",
       "minValue" : 20,
-      "maxValue" : 25
+      "maxValue" : 50
     },
     {
       "type": "pressure",
-      "minValue" : 800,
-      "maxValue" : 900
+      "minValue" : 900,
+      "maxValue" : 1100
     },
     {
       "type": "co2",
-      "minValue" : 200,
-      "maxValue" : 400
+      "minValue" : 300,
+      "maxValue" : 500
     },
     {
-      "type": "light"
+      "type": "light",
+      "minValue" : 0,
+      "maxValue" : 1
     },
     {
-      "type": "horizontal"
+      "type": "horizontal",
+      "minValue" : 0,
+      "maxValue" : 1
     }
   ]
 }
