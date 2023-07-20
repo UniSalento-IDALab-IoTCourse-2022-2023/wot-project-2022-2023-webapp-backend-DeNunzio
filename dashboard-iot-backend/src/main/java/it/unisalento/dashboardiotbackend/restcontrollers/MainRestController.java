@@ -119,7 +119,7 @@ public class MainRestController {
     @RequestMapping(value="/deleteAllRoutes", method= RequestMethod.GET)
     public int deleteAllRoutes() {
         routeRepository.deleteAll();
-        return 0;   
+        return 0;
     }
 
 }
